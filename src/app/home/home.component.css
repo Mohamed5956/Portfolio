@@ -1,0 +1,9 @@
+.centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about{
+    background: #2a2344;
+}

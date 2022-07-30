@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap');
+.font{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size:50px;
+}
+
+.input_shadow{
+    box-shadow: 0 0 3px 1px gray;
+    border-radius: 3px;
+}

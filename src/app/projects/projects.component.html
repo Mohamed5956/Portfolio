@@ -1,0 +1,18 @@
+<p class="font-bold text-4xl header pt-5">Projects</p>
+
+<div class=" p-5 gap-4 grid lg:grid-cols-2 place-items-center  grid-cols-1 ">
+  <ng-container *ngFor="let proj of projects let i=index;  ">
+        <div class=" max-w-lg aspect-video flex flex-col items-center bg-white rounded-lg border shadow-md shadow-black md:flex-row dark:border-gray-700 dark:bg-gray-800 group">
+        <img class="object-cover w-full h-full rounded-t-lg md:h-auto md:w-[40%] md:rounded-none md:rounded-l-lg p-2" src="{{proj.img}}" alt="">
+        <div class="flex flex-col justify-between p-4 leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{proj.title}}</h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{proj.desc}}
+            </p>
+            <div>
+                <button class="bg-[#D92546] rounded-md p-2 text-white transition-all duration-500 group-hover:bg-white group-hover:text-[#D92546]">Read More...</button>
+            </div>
+          </div>
+      </div>
+      </ng-container>   
+</div>
+

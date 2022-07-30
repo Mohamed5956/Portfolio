@@ -1,0 +1,54 @@
+<div class="lg:flex text-white  p-5" id="contact_main">
+
+    <div class="lg:w-1/2">
+        <p class="px-2 py-1 font mb-2" >Contact Me</p>
+
+        <div class="mt-6 ml-6 flex items-center gap-5">
+           <div class="flex justify-center items-center w-10  rounded-full h-10 bg-[#D92546] ">
+               <mat-icon class="opacity-70">phone_in_talk</mat-icon>
+           </div> 
+           <div>
+            <p class="text-gray-400/80 ">Phone</p>
+            <a href="tel:+201062535301">+20 106 253 301</a>
+        </div>
+        </div>
+
+        <div class="mt-6 ml-6 flex items-center gap-5 ">
+            <div class="flex justify-center items-center w-10  rounded-full h-10 bg-[#D92546] ">
+                <mat-icon class="opacity-70"> mail_outline</mat-icon>
+            </div> 
+            <div>
+                <p class="text-gray-400/80 ">Email</p>
+                <a href="mailto:Mohammedadell301@gmail.com?subject=Need Website&body=Hello Mohamed">Mohammedadell301@gmail.com</a>
+            </div>
+         </div>
+        
+    </div>
+
+    <div class="lg:w-1/2">
+        <p class="px-2 py-1 mb-3 font"  >Drop a Line</p>
+        <div class="lg:flex items-center">
+            <form  [formGroup]="fg" (ngSubmit)="sendEmail($event)">
+                <div class="md:flex gap-4 md:space-y-0 space-y-4">                 
+                    <div class="md:w-1/2">
+                        <input type="text" formControlName="name" name="name" placeholder="FirstName" class=" bg-inherit input_shadow py-2 px-1 w-full" >
+                        <span class="block" *ngIf="name?.invalid&&name?.touched">Insert your name</span>
+                    </div>
+                    <div class="md:w-1/2">
+                        <input type="text" formControlName="email" name="email" placeholder="Email" class="bg-inherit input_shadow py-2 px-1 w-full">
+                        <span class="block" *ngIf="email?.invalid&&email?.touched">Insert your Email</span>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <textarea name="message" formControlName="message" placeholder="Message" maxlength="150" cols="30" rows="10" class="bg-inherit input_shadow w-full py-2 px-1"></textarea>
+                    <span *ngIf="message?.invalid&&message?.touched">Insert your Message</span>
+                </div>
+                <button type="submit" class="mt-5 text-lg px-12 py-3 bg-[#D92546] rounded-md p-2
+                 text-white transition-all duration-500
+                  group-hover:bg-white group-hover:text-[#D92546]" 
+                  [disabled]="fg.invalid" [ngClass]="{'bg-gray-500':fg.invalid}">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</div>

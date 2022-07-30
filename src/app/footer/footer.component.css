@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap');
+
+.font{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size:50px;
+}
+
+
+.circle{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    border: 1px dashed rgba(255, 255, 255, 0.389);
+}
+
