@@ -31,17 +31,21 @@
             <form  [formGroup]="fg" (ngSubmit)="sendEmail($event)">
                 <div class="md:flex gap-4 md:space-y-0 space-y-4">                 
                     <div class="md:w-1/2">
-                        <input type="text" formControlName="name" name="name" placeholder="FirstName" class=" bg-inherit input_shadow py-2 px-1 w-full" >
-                        <span class="block" *ngIf="name?.invalid&&name?.touched">Insert your name</span>
+                        <input type="text" formControlName="name" name="name" placeholder="FirstName" class=" bg-inherit input_shadow py-2 px-1 w-full" 
+                        [class.is-valid]="name?.valid" [class.is-invalid]="name?.invalid">
+                        <span class="block mt-1" *ngIf="name?.invalid&&name?.touched">Insert your name</span>
                     </div>
                     <div class="md:w-1/2">
-                        <input type="text" formControlName="email" name="email" placeholder="Email" class="bg-inherit input_shadow py-2 px-1 w-full">
-                        <span class="block" *ngIf="email?.invalid&&email?.touched">Insert your Email</span>
+                        <input type="text" formControlName="email" name="email" placeholder="Email" class="bg-inherit input_shadow py-2 px-1 w-full"
+                        [class.is-valid]="email?.valid" [class.is-invalid]="email?.invalid">
+                        <span class="block mt-1" *ngIf="email?.errors?.['required']&&email?.touched">Insert your Email</span>
+                        <span class="block mt-1" *ngIf="email?.errors?.['email']&&email?.touched">Insert correct email <small class="text-gray-500">example@example.com</small></span>
                     </div>
                 </div>
                 <div class="mt-5">
-                    <textarea name="message" formControlName="message" placeholder="Message" maxlength="150" cols="30" rows="10" class="bg-inherit input_shadow w-full py-2 px-1"></textarea>
-                    <span *ngIf="message?.invalid&&message?.touched">Insert your Message</span>
+                    <textarea name="message" formControlName="message" placeholder="Message" maxlength="150" cols="30" rows="10" class="bg-inherit input_shadow w-full py-2 px-1"
+                    [class.is-valid]="message?.valid" [class.is-invalid]="message?.invalid"></textarea>
+                    <span class="mt-1" *ngIf="message?.invalid&&message?.touched">Insert your Message</span>
                 </div>
                 <button type="submit" class="mt-5 text-lg px-12 py-3 bg-[#D92546] rounded-md p-2
                  text-white transition-all duration-500

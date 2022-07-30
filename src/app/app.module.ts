@@ -18,7 +18,6 @@ import { FooterComponent } from './footer/footer.component';
 import { CirclesComponent } from './circles/circles.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +35,7 @@ import { CirclesComponent } from './circles/circles.component';
     AppRoutingModule,
     SwiperModule,
     MatIconModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
