@@ -26,11 +26,12 @@ export class SwiperComponent implements OnInit {
       'php_logo',
       'typescript',
       'laravel',
+      'Node.js'
     ];
-   }
+  }
 
   ngOnInit(): void {
-  
+
   }
 
 
